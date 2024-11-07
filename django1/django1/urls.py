@@ -20,5 +20,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('app_F/', include('app_F.urls')), # added app_F app
+    
+    
+    path('cover_page/', include('cover_page.urls')),
 ]
 

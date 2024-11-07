@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Cover Page</title>
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lavenderblush;
+            margin: 30px;
+            padding: 0px;
+        }
+
+        h1{
+            text-align: center;
+            margin-top: 20px;
+            color: rgb(26, 192, 213);
+        }
+
+        .cover-container{
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .cover{
+            background-color: rgb(212, 180, 186);
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 60%;
+            height: 30vh;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow:  rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            margin-top: 20px;
+            padding-top: 80px;
+            
+            
+        }
+
+        .cover h2{
+            margin-top: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Student Cover Page</h1>
+    <div>{{message}}</div>
+    {% for student in students %}
+    <div class="cover-container">
+        <div class="cover">
+            <h2> {{ student.university_name }}</h2>
+            <h3><strong>Name : </strong>{{ student.name }}</h3>
+            <h4><strong>Student Id : </strong>{{ student.student_id }}</h4>
+            <h4><strong>Department : </strong>{{ student.dept }}</h4>
+            <h4><strong>Course : </strong>{{ student.course }}</h4>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>
